@@ -8,7 +8,7 @@ def index():
 
 @app.route('/test', methods=['GET'])
 def test_route():
-	return '<h1>Auto Deploy Working!</h1>'
+	return '<h1>Auto Deploy Working 2nd Time!</h1>'
 
 if __name__=='__main__':
 	app.run()
