@@ -17,7 +17,7 @@ def test_route():
 @app.route('/api/summaries/', methods=['GET'])
 def get_summaries_by_domain():
 	domain = request.args.get('domain')
-	return jsonify(dbconn.get_summaries_by_domain(domain))
+	return jsonify(resultset = dbconn.get_summaries_by_domain(domain))
 
 
 @app.route('/api/details/', methods=['GET'])
@@ -37,4 +37,4 @@ def get_full_details():
 
 
 if __name__ == '__main__':
-	app.run()
+	app.run(debug=True)
