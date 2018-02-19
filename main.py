@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import dbconn
 
 app = Flask(__name__)
@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-	return '<h1>Hello World!</h1>'
+	return render_template('myindex.html')
 
 
 @app.route('/test/', methods=['GET'])
